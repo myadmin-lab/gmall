@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <modules>
+        <module>../gmall-api</module>
+        <module>../gmall-common-util</module>
+        <module>../gmall-service-util</module>
+        <module>../gmall-web-util</module>
+    </modules>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.21.RELEASE</version>
+    </parent>
+    <groupId>com.su</groupId>
+    <artifactId>gmall-parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+
+        <fastjson.version>1.2.46</fastjson.version>
+        <dubbo-starter.version>1.0.10</dubbo-starter.version>
+
+        <zkclient.version>0.10</zkclient.version>
+        <nekohtml.version>1.9.20</nekohtml.version>
+        <xml-apis.version>1.4.01</xml-apis.version>
+        <batik-ext.version>1.9.1</batik-ext.version>
+        <jsoup.version>1.11.2</jsoup.version>
+        <httpclient.version>4.5.5</httpclient.version>
+        <commons-lang3.version>3.7</commons-lang3.version>
+        <jedis.version>2.9.0</jedis.version>
+        <jest.version>5.3.3</jest.version>
+        <jna.version>4.5.1</jna.version>
+        <beanUtils.version>1.9.3</beanUtils.version>
+        <mybatis-plus.version>3.4.0</mybatis-plus.version>
+        <mybatis-plus-generator.version>3.4.0</mybatis-plus-generator.version>
+        <velocity-engine-core.version>2.2</velocity-engine-core.version>
+        <lombok.version>1.18.12</lombok.version>
+        <mysql.version>8.0.19</mysql.version>
+
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!--fastjson -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+            <!--dubbo整合springboot,zookeeper-->
+            <dependency>
+                <groupId>com.gitee.reger</groupId>
+                <artifactId>spring-boot-starter-dubbo</artifactId>
+                <version>${dubbo-starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.101tec</groupId>
+                <artifactId>zkclient</artifactId>
+                <version>${zkclient.version}</version>
+            </dependency>
+
+
+            <!--Thmyleaf相关 -->
+            <dependency>
+                <groupId>net.sourceforge.nekohtml</groupId>
+                <artifactId>nekohtml</artifactId>
+                <version>${nekohtml.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>xml-apis</groupId>
+                <artifactId>xml-apis</artifactId>
+                <version>${xml-apis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.xmlgraphics</groupId>
+                <artifactId>batik-ext</artifactId>
+                <version>${batik-ext.version}</version>
+            </dependency>
+
+            <!--html解析器 -->
+            <dependency>
+                <groupId>org.jsoup</groupId>
+                <artifactId>jsoup</artifactId>
+                <version>${jsoup.version}</version>
+            </dependency>
+
+            <!--java程序发送http协议 -->
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${httpclient.version}</version>
+            </dependency>
+
+            <!--工具包 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${commons-lang3.version}</version>
+            </dependency>
+
+            <!--redis的java客户端开发包 -->
+            <dependency>
+                <groupId>redis.clients</groupId>
+                <artifactId>jedis</artifactId>
+                <version>${jedis.version}</version>
+            </dependency>
+
+            <!--elasticsearch依赖 -->
+            <dependency>
+                <groupId>io.searchbox</groupId>
+                <artifactId>jest</artifactId>
+                <version>${jest.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.java.dev.jna</groupId>
+                <artifactId>jna</artifactId>
+                <version>${jna.version}</version>
+            </dependency>
+
+            <!--javaBeen的工具包 -->
+            <dependency>
+                <groupId>commons-beanutils</groupId>
+                <artifactId>commons-beanutils</artifactId>
+                <version>${beanUtils.version}</version>
+            </dependency>
+
+            <!--mybatis-plus整合springboot -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-generator</artifactId>
+                <version>${mybatis-plus-generator.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.velocity</groupId>
+                <artifactId>velocity-engine-core</artifactId>
+                <version>${velocity-engine-core.version}</version>
+            </dependency>
+
+            <!--lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+
+
+
+        </dependencies>
+    </dependencyManagement>
+</project>

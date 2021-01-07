@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>gmall-parent</artifactId>
+        <groupId>com.su</groupId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../gmall-parent/pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>gmall-service-util</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>com.su</groupId>
+            <artifactId>gmall-common-util</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <!--mybatis-plus整合springboot -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+        </dependency>
+
+        <!--jedis就是集成了redis的一些命令操作，封装了redis的java客户端 -->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-log4j2</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>
